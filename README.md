@@ -211,7 +211,7 @@ c   18.237974  22.33863
 En el ejemplo presentado al iniciar el tutorial, mencionamos que se sabe que el rendimiento de soja disminuye al atrasar la fecha de siembra, sin embargo, esta disminución puede ser distinta según el cultivar de soja que se utilice. En la Figura Nº 5 se presentan los datos de dos cultivares de soja distintos en su relación con la fecha de siembra medida como días desde un día base.
 Figura Nº 5: Rendimientos máximos de dos cultivares de soja y la fecha de siembra expresada como días desde una fecha base. Puntos negros cultivar “A” y puntos rojos cultivar ”B”.
 
-´´´r
+```r
 
 nls(rend ~ A[cultivar]+
            p[cultivar]*(dias-dc[cultivar]>0)*(dias-dc[cultivar]),
@@ -246,11 +246,11 @@ p2   -53.59895  -40.92924
 dc1   41.20463   44.88233
 dc2   56.90056   65.54673
 
-´´´
+```
 
 Para obtener el gráfico que se presenta en la figura Nº 6 se utilizaron las siguientes sentencias:
 
-´´´r
+```r
 
 coef(nls4) -> coe
 plot( rend ~ dias, data=dat4, pch=20, cex=2, cex.lab=1.4,
@@ -263,7 +263,7 @@ lines(xx,
       ifelse(xx < coe[6], coe[2], coe[2]+coe[4]*(xx-coe[6])),
      lwd=3, col="red")
      
-´´´
+```
 
 <p align="center">
   <img src="imagenes/fig.6.JPG" alt="Figura 6" width="500">
