@@ -9,7 +9,7 @@ En muchos fenómenos biológicos, el uso de modelos lineales con quiebre resulta
 En la figura Nº 1 se presenta un conjunto de datos simulados describiendo esta situación.  
 
 	
-![Figura 1](Fig.1.JPG)
+![Figura 1](imagenes/Fig.1.JPG)
 
 
 Figura 1: Rendimientos máximos de un cultivar de soja y la fecha de siembra expresada como días desde una fecha base.
@@ -21,7 +21,7 @@ En esta situación hay tres parámetros a estimar
 
 El modelo teórico que se propone para describir esta relación es:
 
-					(Ec. Nº 1)
+![Figura 2](imagenes/ecuacion.jPG)				(Ec. Nº 1)
 
 El modelo de la Ec. Nº 1, es un modelo no lineal en los parámetros pues en algunos de sus términos a parece la multiplicación de algunos de ellos.
 Por lo tanto la función que utilizaremos para ajustar este modelo es “nls” del paquete “stats” de R, que realiza una ajuste de mínimos cuadrados de un modelo no lineal.
