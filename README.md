@@ -36,4 +36,28 @@ start = list(A = 5000, p = -80, dc = 40),
 data = dat1) -> nls1
 ```
 
+En esta función, se debe explicitar:
+
+1)	la fórmula no lineal de la relación entre rendimiento y días. En este contexto, la expresión *(dias-dc>0)* genera una variable indicadora que vale 0 si días es menor a dc y 1 si días es mayor a dc.
+
+2)	valores iniciales de los parámetros, en este caso los parámetros del modelos son fáciles de estimar desde la figura Nº 1. Un valor inicial para **dc** puede ser simplemente un valor de día donde se vea un quiebre en la relación. Un valor inicial para **A** puede ser un valor medio de los datos observados correspondientes a días anteriores al punto de quiebre. Un valor inicial para **p** puede ser una estimación de la pendiente en la segunda etapa del proceso, puede tomar la diferencia entre el rendimiento mínimo y el valor inicial de **A** (será un valor negativo en este caso) y dividirlo por la cantidad de días entre el punto de quiebre y el ultimo día con dato.
+   
+3)	En un resumen de este modelo obtenemos estimaciones de los parámetros de interés, sus errores estándar , estadísticos t con sus respectivos valores p correspondientes a las hipótesis sobre si dicho parámetro es o no  distinto de cero, en muchos casos no es una prueba de interés biológico.
+
+```r
+summary(nls1)
+
+Formula: rend ~ A + p * (dias - dc > 0) * (dias – dc)
+
+Parameters:
+   Estimate Std. Error t value Pr(>|t|)    
+A  5032.314     61.628   81.66   <2e-16 ***
+p   -78.240      2.650  -29.52   <2e-16 ***
+dc   42.080      1.453   28.95   <2e-16 ***
+Signif. Codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 246.5 on 37 degrees of freedom
+Number of iterations to convergence: 3
+Achieved convergence tolerance: 2.413e-09
+```
 
