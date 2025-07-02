@@ -169,6 +169,7 @@ Donde A, b1 y c tienen las mismas interpretaciones que las mencionadas antes, mi
 En un resumen de este modelos vemos:
 
 ´´´r
+
 summary(nls3)
 Formula: y ~ a + b1 * (x - c) + b2 * (x - c > 0) * (x - c)
 Parameters:
@@ -183,12 +184,14 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 43.64 on 36 degrees of freedom
 Number of iterations to convergence: 3
 Achieved convergence tolerance: 7.145e-08
+
 ´´´
 
 La ventaja de esta nueva parametrización es que en el resumen, además de obtener las estimaciones de los parámetros y sus errores estándares, se prueba la hipótesis sobre si el parámetro b2 es  distinto de cero o no, esto nos dice si es significativo el cambio de pendiente en el modelo o un modelo lineal común es suficiente para describir los datos, en este caso  vemos que el cambio de pendiente es significativo (p =4.73e-12).
 Los intervalos del 99% confianza de este modelo se pueden obtener con:
 
 ´´´r
+
 confint(nls3, level=0.99)
 Waiting for profiling to be done...
          0.5%     99.5%
@@ -196,6 +199,7 @@ a  151.098399 316.02828
 b1  -2.272925  19.85207
 b2  34.903722  60.61799
 c   18.237974  22.33863
+
 ´´´
 
 **Modelos lineal plató simultáneos para distintos grupos de datos.**
@@ -204,6 +208,7 @@ En el ejemplo presentado al iniciar el tutorial, mencionamos que se sabe que el 
 Figura Nº 5: Rendimientos máximos de dos cultivares de soja y la fecha de siembra expresada como días desde una fecha base. Puntos negros cultivar “A” y puntos rojos cultivar ”B”.
 
 ´´´r
+
 nls(rend ~ A[cultivar]+
            p[cultivar]*(dias-dc[cultivar]>0)*(dias-dc[cultivar]),
     start=list(A=c(5000,4500),p=c(-80,-40), dc=c(45,50))) -> nls4
@@ -236,11 +241,13 @@ p1   -82.46759  -75.27474
 p2   -53.59895  -40.92924
 dc1   41.20463   44.88233
 dc2   56.90056   65.54673
+
 ´´´
 
 Para obtener el gráfico que se presenta en la figura Nº 6 se utilizaron las siguientes sentencias:
 
 ´´´r
+
 coef(nls4) -> coe
 plot( rend ~ dias, data=dat4, pch=20, cex=2, cex.lab=1.4,
       col=unclass(cultivar), xlab="Días desde fecha base",
@@ -251,6 +258,7 @@ lines(xx <- seq(min(dat4$dias),max(dat4$dias), length=200),
 lines(xx,
       ifelse(xx < coe[6], coe[2], coe[2]+coe[4]*(xx-coe[6])),
      lwd=3, col="red")
+     
 ´´´
 
 <p align="center">
