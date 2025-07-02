@@ -22,7 +22,7 @@ En esta situación hay tres parámetros a estimar
 El modelo teórico que se propone para describir esta relación es:
 
 <p align="center">
-  <img src="imagenes/ECUACION.1.jpg" alt="Figura 1" width="500">
+  <img src="imagenes/ecuacion.1.JPG" alt="Figura 1" width="500">
 </p>
 
 El modelo de la Ec. Nº 1, es un modelo no lineal en los parámetros pues en algunos de sus términos a parece la multiplicación de algunos de ellos.
