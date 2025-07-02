@@ -9,6 +9,7 @@ En muchos fenómenos biológicos, el uso de modelos lineales con quiebre resulta
 En la figura Nº 1 se presenta un conjunto de datos simulados describiendo esta situación.  
 
 	
-![Figura 1](img/Fig.1.JPG)
+![Figura 1](Fig.1.JPG)
+
 
 Figura 1: Rendimientos máximos de un cultivar de soja y la fecha de siembra expresada como días desde una fecha base.
