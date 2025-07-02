@@ -1,4 +1,4 @@
-##Ajuste de modelos bi-lineales con punto de quiebre no pre-establecido##
+#Ajuste de modelos bi-lineales con punto de quiebre no pre-establecido
 
 **Modelos lineal plató o meseta**
 
