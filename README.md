@@ -107,7 +107,7 @@ La expresión (dias-dc< 0), es lo único que ha cambiado respecto al modelo ante
 
 Figura Nº 3: Rendimientos máximos de un cultivar de soja y una variable x explicativa. Línea negra continua es el modelo lineal plató ajustado.
 
-´´´r
+```r
 summary(nls2)
 Formula: rend ~ A + p * (dias - dc < 0) * (dias – dc)
 Parameters:
