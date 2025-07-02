@@ -83,7 +83,7 @@ lines(min(dat1$dias):max(dat1$dias),
       lwd=3)
 ```
 <p align="center">
-  <img src="imagenes/fig.1.JPG" alt="Figura 2" width="500">
+  <img src="imagenes/fig.2.JPG" alt="Figura 2" width="500">
 </p>
 
 Figura Nº 2: Rendimientos máximos de un cultivar de soja y la fecha de siembra expresada como días desde una fecha base. Línea negra continua es el modelo lineal plató ajustado.
