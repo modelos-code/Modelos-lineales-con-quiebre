@@ -147,8 +147,9 @@ lines(seq(min(dat2$x),max(dat2$x), length=200),
                      x=seq(min(dat2$x),max(dat2$x),length=200))),
       lwd=3)
 ```
-
-**Modelo bi lineal con quiebre en la pendiente.**
+<h2 style="color:#34495e; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-top: 40px;">
+  🔹 Modelo bi lineal con quiebre en la pendiente.
+</h2>
 
 Otros modelos bi lineales que suelen ser de interés, son aquellos donde la variable respuesta y tiene una relación lineal con otra variable explicativa x, pero cuya relación tiene un punto de quiebre. Es decir, a partir de un cierto valor de x la pendiente de la recta cambia. Como por ejemplo la relación mostrada en la Figura Nº 4.
 Figura Nº 4: Relación bi-lineal con quiebre de pendiente entre las variables x e y.
@@ -211,8 +212,9 @@ b2  34.903722  60.61799
 c   18.237974  22.33863
 
 ```
-
-**Modelos lineal plató simultáneos para distintos grupos de datos.**
+<h2 style="color:#34495e; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-top: 40px;">
+  🔹 Modelos lineal plató simultáneos para distintos grupos de datos.
+</h2>
 
 En el ejemplo presentado al iniciar el tutorial, mencionamos que se sabe que el rendimiento de soja disminuye al atrasar la fecha de siembra, sin embargo, esta disminución puede ser distinta según el cultivar de soja que se utilice. En la Figura Nº 5 se presentan los datos de dos cultivares de soja distintos en su relación con la fecha de siembra medida como días desde un día base.
 Figura Nº 5: Rendimientos máximos de dos cultivares de soja y la fecha de siembra expresada como días desde una fecha base. Puntos negros cultivar “A” y puntos rojos cultivar ”B”.
