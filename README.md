@@ -1,4 +1,4 @@
-
+º
 <h2 style="text-align:center; color:#2c3e50; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-bottom: 30px;">
   📈 Ajuste de Modelos Bi-lineales con Punto de Quiebre no Pre-establecido
 </h2>
@@ -152,6 +152,11 @@ lines(seq(min(dat2$x),max(dat2$x), length=200),
 </h2>
 
 Otros modelos bi lineales que suelen ser de interés, son aquellos donde la variable respuesta y tiene una relación lineal con otra variable explicativa x, pero cuya relación tiene un punto de quiebre. Es decir, a partir de un cierto valor de x la pendiente de la recta cambia. Como por ejemplo la relación mostrada en la Figura Nº 4.
+
+<p align="center">
+  <img src="imagenes/fig.4.JPG" alt="Figura 4" width="500">
+</p>
+
 Figura Nº 4: Relación bi-lineal con quiebre de pendiente entre las variables x e y.
 En estos casos el modelo lineal que describe la situación es:
 
@@ -198,8 +203,8 @@ Achieved convergence tolerance: 7.145e-08
 ```
 
 La ventaja de esta nueva parametrización es que en el resumen, además de obtener las estimaciones de los parámetros y sus errores estándares, se prueba la hipótesis sobre si el parámetro b2 es  distinto de cero o no, esto nos dice si es significativo el cambio de pendiente en el modelo o un modelo lineal común es suficiente para describir los datos, en este caso  vemos que el cambio de pendiente es significativo (p =4.73e-12).
-Los
-intervalos del 99% confianza de este modelo se pueden obtener con:
+
+Los intervalos del 99% confianza de este modelo se pueden obtener con:
 
 ```r
 
@@ -217,6 +222,11 @@ c   18.237974  22.33863
 </h2>
 
 En el ejemplo presentado al iniciar el tutorial, mencionamos que se sabe que el rendimiento de soja disminuye al atrasar la fecha de siembra, sin embargo, esta disminución puede ser distinta según el cultivar de soja que se utilice. En la Figura Nº 5 se presentan los datos de dos cultivares de soja distintos en su relación con la fecha de siembra medida como días desde un día base.
+
+<p align="center">
+  <img src="imagenes/fig.5.JPG" alt="Figura 5" width="500">
+</p>
+
 Figura Nº 5: Rendimientos máximos de dos cultivares de soja y la fecha de siembra expresada como días desde una fecha base. Puntos negros cultivar “A” y puntos rojos cultivar ”B”.
 
 ```r
