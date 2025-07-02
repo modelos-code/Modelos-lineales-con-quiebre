@@ -73,6 +73,7 @@ dc   39.59749   44.42159
 
 La interpretación de estos intervalos sería, el punto de quiebre a partir del cual se producen pérdidas en el rendimiento de soja, con un 90% de confianza, está entre 40 y 44 días posteriores a la fecha base. Previo a esta fecha crítica el rendimiento medio de este cultivar de soja se encuentra, con un 90% de confianza, entre 4929 y 5137 Kg/ha y a partir de esa fecha, con un 90% de confianza, la pérdida promedio por día de atraso en la siembra está entre 82.7 y 73.9 Kg/ha.
 En la Figura Nº 2 se muestra el modelo ajustado, y fue obtenida con las siguientes sentencias:
+
 ```r
 plot(rend ~ dias, pch=20, cex=2, data=dat1,
      ylab="Rendimiento de soja (Kg/ha)",
@@ -95,9 +96,10 @@ En el caso de querer ajustar un modelo lineal plató, con el plató en el lado d
 ```r
 nls(y ~ A+ p*(x-dc<0)*(x-dc),data=dat2,
     start=list(A=5000,p=+80, dc=75)) -> nls2
-´´´
+```
 
 La expresión (dias-dc< 0), es lo único que ha cambiado respecto al modelo anterior y genera ahora una variable indicadora que vale 0 si días es mayor a dc y 1 si días es menor a dc. Ahora el valor inicial de p debe ser positivo pues es una estimación de la pendiente en el tramo inicial del modelo.
+
 
 <p align="center">
   <img src="imagenes/fig.3.JPG" alt="Figura 3" width="500">
