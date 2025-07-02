@@ -21,7 +21,9 @@ En esta situación hay tres parámetros a estimar
 
 El modelo teórico que se propone para describir esta relación es:
 
-![Figura 2](imagenes/ecuacion.1.JPG)				(Ec. Nº 1)
+<p align="center">
+  <img src="imagenes/figura1.jpg" alt="Figura 1" width="500">
+</p>
 
 El modelo de la Ec. Nº 1, es un modelo no lineal en los parámetros pues en algunos de sus términos a parece la multiplicación de algunos de ellos.
 Por lo tanto la función que utilizaremos para ajustar este modelo es “nls” del paquete “stats” de R, que realiza una ajuste de mínimos cuadrados de un modelo no lineal.
