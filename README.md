@@ -15,9 +15,9 @@ En la figura Nº 1 se presenta un conjunto de datos simulados describiendo esta 
 Figura 1: Rendimientos máximos de un cultivar de soja y la fecha de siembra expresada como días desde una fecha base.
 
 En esta situación hay tres parámetros a estimar
-**dc**  día en el que se produce el quiebre de la tendencia
-**A**= nivel medio de rendimiento antes del día dc
-**p**= pérdida de rendimiento por día a partir del día dc. 
+- **dc**  día en el que se produce el quiebre de la tendencia
+- **A**= nivel medio de rendimiento antes del día dc
+- **p**= pérdida de rendimiento por día a partir del día dc. 
 
 El modelo teórico que se propone para describir esta relación es:
 
