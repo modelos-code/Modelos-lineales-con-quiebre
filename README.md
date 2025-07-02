@@ -161,6 +161,7 @@ En esta situación hay cuatro parámetros a estimar:
 **b2** = cambio en y por un cambio unitario en el valor de x después del punto de quiebre.
 
 Para los datos de la Figura Nº 4 se ajustó el siguiente modelo:
+
 ```r 
 nls(y ~ a + b1*(x-c)+b2*(x-c>0)*(x-c), data=dat ,            
     start=list(a=230,b1=14,b2=50, c=20)) -> nls3
@@ -170,7 +171,7 @@ Donde A, b1 y c tienen las mismas interpretaciones que las mencionadas antes, mi
 
 En un resumen de este modelos vemos:
 
-´´´r
+```r
 
 summary(nls3)
 Formula: y ~ a + b1 * (x - c) + b2 * (x - c > 0) * (x - c)
@@ -187,12 +188,13 @@ Residual standard error: 43.64 on 36 degrees of freedom
 Number of iterations to convergence: 3
 Achieved convergence tolerance: 7.145e-08
 
-´´´
+```
 
 La ventaja de esta nueva parametrización es que en el resumen, además de obtener las estimaciones de los parámetros y sus errores estándares, se prueba la hipótesis sobre si el parámetro b2 es  distinto de cero o no, esto nos dice si es significativo el cambio de pendiente en el modelo o un modelo lineal común es suficiente para describir los datos, en este caso  vemos que el cambio de pendiente es significativo (p =4.73e-12).
-Los intervalos del 99% confianza de este modelo se pueden obtener con:
+Los
+intervalos del 99% confianza de este modelo se pueden obtener con:
 
-´´´r
+```r
 
 confint(nls3, level=0.99)
 Waiting for profiling to be done...
@@ -202,7 +204,7 @@ b1  -2.272925  19.85207
 b2  34.903722  60.61799
 c   18.237974  22.33863
 
-´´´
+```
 
 **Modelos lineal plató simultáneos para distintos grupos de datos.**
 
