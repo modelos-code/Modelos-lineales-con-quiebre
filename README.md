@@ -25,6 +25,15 @@ El modelo teórico que se propone para describir esta relación es:
   <img src="imagenes/ecuacion.1.JPG" alt="Figura 1" width="500">
 </p>
 
+(Ec. Nº 1)
+
 El modelo de la Ec. Nº 1, es un modelo no lineal en los parámetros pues en algunos de sus términos a parece la multiplicación de algunos de ellos.
 Por lo tanto la función que utilizaremos para ajustar este modelo es “nls” del paquete “stats” de R, que realiza una ajuste de mínimos cuadrados de un modelo no lineal.
+
+```r
+nls(rend ~ A + p * (dias - dc > 0) * (dias - dc),
+start = list(A = 5000, p = -80, dc = 40),
+data = dat1) -> nls1
+```
+
 
