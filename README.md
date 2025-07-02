@@ -1,9 +1,15 @@
 
-## Ajuste de modelos bi-lineales con punto de quiebre no pre-establecido
+<h1 style="text-align:center; color:#2c3e50; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 36px; margin-bottom: 30px;">
+  📈 Ajuste de Modelos Bi-lineales con Punto de Quiebre no Pre-establecido
+</h1>
 
-**Modelos lineal plató o meseta**
+<h2 style="color:#34495e; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-top: 40px;">
+  ▪️ Modelos Lineal Plató o Meseta
+</h2>
 
-**Modelo con Plató en la Izquierda**
+<h3 style="color:#2d3436; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; margin-top: 30px;">
+  🔹 Modelo con Plató en la Izquierda
+</h3>
 
 En muchos fenómenos biológicos, el uso de modelos lineales con quiebre resulta una simplificación muy útil de la relación entre variables. Por ejemplo, se sabe que el rendimiento de soja disminuye al atrasar la fecha de siembra; sin embargo, esta disminución no es lineal, sino que el atraso de la fecha de siembra no parece afectar demasiado al rinde en un principio, pero a partir de un momento dado las pérdidas siguen una tendencia lineal. En este caso, determinar el punto a partir del cual los rindes empiezan a ser afectados así como conocer a qué tasa estos rindes van decreciendo una vez superado dicho punto de inflexión, son preguntas de alto interés agronómico.
 En la figura Nº 1 se presenta un conjunto de datos simulados describiendo esta situación.  
