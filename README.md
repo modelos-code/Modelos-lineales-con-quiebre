@@ -1,5 +1,5 @@
 
-<h1 style="text-align:center; color:#2c3e50; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-bottom: 30px;">
+<h1 style="text-align:center; color:#2c3e50; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 54px; margin-bottom: 30px;">
   📈 Ajuste de Modelos Bi-lineales con Punto de Quiebre no Pre-establecido
 </h1>
 
