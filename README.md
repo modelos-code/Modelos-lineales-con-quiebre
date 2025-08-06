@@ -3,6 +3,8 @@
   📈 Ajuste de Modelos Bi-lineales con Punto de Quiebre no Pre-establecido
 </h2>
 
+Los modelos lineales con quiebre hacer referencia a una relacion lineal entre dos variables donde la pendiente cambia en algn punto de la relación, este es el punto de quiebre. Por ejemplo, se sabe que el rendimiento de soja disminuye al atrasar la fecha de siembra; si bien la relación es lineal, el atraso de la fecha de siembra no parece afectar demasiado al rinde en un principio, pero a partir de un momento dado, las pérdidas siguen una tendencia lineal. En casos donde el punto de quiebre es conocido, el modelo se puede ajustar mediante un modelo lineal múltiple. Sin embargo, en muchas situaciones, este punto es desconocide y encontrar uan estimacion de este valor es uno de los problemas a responder. En estas situaciones el modelo se convierte en un modelo no lineal y trae aparejados diversas compliccacione en su ajuste. A continuación se presentan ejemplos de aplicacion de estas modelos en R.  
+
 <h2 style="color:#34495e; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; margin-top: 40px;">
   🔹 Modelos Lineal Plató o Meseta
 </h2>
@@ -25,11 +27,19 @@ En esta situación hay tres parámetros a estimar
 - **A**= nivel medio de rendimiento antes del día dc
 - **p**= pérdida de rendimiento por día a partir del día dc. 
 
-El modelo teórico que se propone para describir esta relación es:
+El modelo teórico que se propone para describir esta relación es: 
 
-<p align="center">
-  <img src="imagenes/ecuacion.1.JPG" alt="ecuacion 1" width="500">
-</p>
+Si $días<d_c $ 
+
+$$ 
+Rend= A+\varepsilon 
+$$
+
+mientras que si $días \geq d_c$
+
+$$
+Rend= A+p\  d_c - p\  días + \varepsilon 
+$$
 
 (Ec. Nº 1)
 
@@ -160,9 +170,20 @@ Otros modelos bi lineales que suelen ser de interés, son aquellos donde la vari
 Figura Nº 4: Relación bi-lineal con quiebre de pendiente entre las variables x e y.
 En estos casos el modelo lineal que describe la situación es:
 
-<p align="center">
-  <img src="imagenes/ecuacion.2.JPG" alt="ecuacion 2" width="500">
-</p>
+El modelo teórico que se propone para describir esta relación es: 
+
+Si $x \leq c$
+
+$$ 
+y= A+b_1 \ (x-c) + \varepsilon 
+$$
+
+mientras que si $x \geq c$
+
+$$
+y= A+(b_1+b_2) \ (x-c)  + \varepsilon 
+$$
+
 
 (Ec. Nº 2)
 
